@@ -1,6 +1,6 @@
 // Hive keys for local storage
 class DbKeys {
 
-  static const dbProducts = 'pizza_products';
+  static const dbProducts = 'pizzas';
 
 }

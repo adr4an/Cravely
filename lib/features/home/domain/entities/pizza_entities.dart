@@ -1,6 +1,3 @@
-
-import 'package:cravely/features/home/domain/entities/macros_entity.dart';
-
 class PizzaEntity {
   final String pizzaId;
   final String name;
@@ -9,7 +6,7 @@ class PizzaEntity {
   final double discount;
   final String imgUrl;
   final String categories;
-  final String rating;
+  final double rating;
   final Macros macros;
 
   PizzaEntity({
@@ -23,4 +20,36 @@ class PizzaEntity {
     required this.rating,
     required this.macros,
   });
+}
+
+class Macros {
+  final int cals;
+  final int carbs;
+  final int proteins;
+  final int fats;
+
+  const Macros({
+    required this.cals,
+    required this.carbs,
+    required this.proteins,
+    required this.fats,
+  });
+
+  factory Macros.fromJson(Map<String, dynamic> json) {
+    return Macros(
+      cals: json['cals'],
+      carbs: json['carbs'],
+      proteins: json['proteins'],
+      fats: json['fats'],
+    );
+  }
+
+  // Empty Macros
+  static const Macros empty = Macros(
+    cals: 0,
+    carbs: 0,
+    proteins: 0,
+    fats: 0,
+  );
+  
 }
