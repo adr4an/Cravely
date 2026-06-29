@@ -161,6 +161,7 @@ class AuthImpl extends AuthRepo {
       final UserCredential userCredential = 
         await _firebaseAuth.signInWithCredential(credential);
 
+      // get firebase user
       final firebaseUser = userCredential.user!;
 
       // 5. check if user exists in Firestore

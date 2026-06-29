@@ -14,20 +14,20 @@ class AppTheme {
   /// Dark Theme
   static ThemeData darkTheme = FlexThemeData.dark(
     fontFamily: GoogleFonts.poppins().fontFamily,
-    // visualDensity: FlexColorScheme.comfortablePlatformDensity,
-    // swapLegacyOnMaterial3: false,
-    // useMaterial3: true,
-    // subThemesData: const FlexSubThemesData(
-    //   blendOnLevel: 20,
-    //   useMaterial3Typography: true,
-    //   useM2StyleDividerInM3: true,
-    //   alignedDropdown: true,
-    //   useInputDecoratorThemeInDialogs: true,
-    // ),
-    // dialogBackground: Colors.grey.shade900,
-    // scheme: FlexScheme.blueM3,
-    // surfaceTint: Colors.transparent,
-    // tabBarStyle: FlexTabBarStyle.forBackground,
+    visualDensity: FlexColorScheme.comfortablePlatformDensity,
+    swapLegacyOnMaterial3: false,
+    useMaterial3: true,
+    subThemesData: const FlexSubThemesData(
+      blendOnLevel: 20,
+      useMaterial3Typography: true,
+      useM2StyleDividerInM3: true,
+      alignedDropdown: true,
+      useInputDecoratorThemeInDialogs: true,
+    ),
+    dialogBackground: Colors.grey.shade900,
+    scheme: FlexScheme.blueM3,
+    surfaceTint: Colors.transparent,
+    tabBarStyle: FlexTabBarStyle.forBackground,
   );
 
 }

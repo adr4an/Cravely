@@ -1,13 +1,13 @@
 import 'package:cravely/config/theme/auth_theme/auth_theme.dart';
 import 'package:flutter/material.dart';
 
-class CravelyAuthTextStyles {
+class CravelyAuthTexttStyles {
 
   // Get Started Now
   static const TextStyle heading = TextStyle(
     color: AuthColors.headingText,
-    fontWeight: FontWeight.bold,
-    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    fontSize: 20,
     fontFamily: 'Poppins',
   );
 

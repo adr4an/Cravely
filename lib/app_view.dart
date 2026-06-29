@@ -1,7 +1,7 @@
 import 'package:cravely/core/di/di.dart';
-import 'package:cravely/core/network/bloc/connection_bloc.dart';
+import 'package:cravely/core/network/connection_bloc/connection_bloc.dart';
 import 'package:cravely/features/auth/presentation/bloc/auth_bloc/auth_bloc.dart';
-import 'package:cravely/features/auth/presentation/pages/welcome_page.dart';
+import 'package:cravely/features/auth/presentation/pages/welcome_screen.dart';
 import 'package:cravely/features/home/presentation/bloc/get_pizza_bloc/get_pizza_bloc.dart';
 import 'package:cravely/features/home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,6 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
@@ -23,23 +22,26 @@ class AppView extends StatelessWidget {
 
       home: BlocBuilder<AuthBloc, AuthState>(
         builder: (context, state) {
-          
-          if(state.status == AuthStatus.authenticated) {
+          // Navigate to Home Page
+          if (state.status == AuthStatus.authenticated) {
             return BlocProvider(
               create: (_) => getIt<GetPizzaBloc>()
-                ..add(FetchPizzaEvent(
-                  isConnected: context.read<ConnectionBloc>().state.status 
-                    == ConnectivityStatus.connected)
+                ..add(
+                  FetchPizzaEvent(
+                    isConnected:
+                        context.read<ConnectionBloc>().state.status ==
+                        ConnectivityStatus.connected,
+                  ),
                 ),
               child: const HomeScreen(),
             );
           } 
-
-          else if(state.status == AuthStatus.unauthenticated) {
-            // Navigate to Welcome Page
-            return WelcomeScreen();
+          
+          // Navigate to Welcome Page
+          else if (state.status == AuthStatus.unauthenticated) {
+            return const WelcomeScreen();
           }
-
+          
           return SizedBox();
         },
       ),

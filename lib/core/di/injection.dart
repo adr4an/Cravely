@@ -11,4 +11,4 @@ export 'package:cravely/features/home/presentation/bloc/get_pizza_bloc/get_pizza
 export 'package:cravely/core/utils/helpers/hive_helper/register_adapters.dart';
 export 'package:cravely/features/home/data/datasources/local/pizza_local.dart';
 export 'package:connectivity_plus/connectivity_plus.dart';
-export 'package:cravely/core/network/bloc/connection_bloc.dart';
+export 'package:cravely/core/network/connection_bloc/connection_bloc.dart';

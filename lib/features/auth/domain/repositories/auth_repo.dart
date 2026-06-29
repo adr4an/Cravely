@@ -11,7 +11,7 @@ abstract class AuthRepo {
 
   Future<void> setUserData(UserEntity user);
 
-  Future<void> resetPassword(String email); 
+  Future<void> resetPassword(String email);
 
   Future<void> logOut();
 

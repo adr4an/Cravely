@@ -18,7 +18,7 @@ class UserEntity {
     email: '',
     phoneNumber: 0,
     isNewUser: false,
-    );
+  );
 
   UserEntity copyWith({
     String? userId,

@@ -1,4 +1,4 @@
-import 'package:cravely/core/network/bloc/connection_bloc.dart';
+import 'package:cravely/core/network/connection_bloc/connection_bloc.dart';
 import 'package:flutter/material.dart' hide ConnectionState;
 import 'package:flutter_bloc/flutter_bloc.dart';
 
